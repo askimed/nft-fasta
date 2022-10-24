@@ -1,0 +1,93 @@
+nextflow_process {
+
+  name "Test COPY_FASTA"
+
+  script "tests/copy_fasta/copy_fasta.nf"
+  process "COPY_FASTA"
+
+  test("Should work with fasta") {
+
+    when {
+      process {
+        """
+        input[0] = file("tests/fasta.1.fasta")
+        """
+      }
+    }
+
+    then {
+      helloFasta()
+      assert path(process.out.fasta.get(0)).fasta == path("tests/fasta.2.fasta").fasta
+    }
+
+  }
+  
+  test("Should work with fasta.gz") {
+
+    when {
+      process {
+        """
+        input[0] = file("tests/fasta.1.fasta.gz")
+        """
+      }
+    }
+
+    then {
+      assert path(process.out.fasta.get(0)).fasta == path("tests/fasta.2.fasta.gz").fasta
+    }
+
+  }
+  
+  test("Should work with fasta.gz and fasta") {
+
+    when {
+      process {
+        """
+        input[0] = file("tests/fasta.1.fasta.gz")
+        """
+      }
+    }
+
+    then {
+      assert path(process.out.fasta.get(0)).fasta == path("tests/fasta.2.fasta").fasta
+    }
+
+  }  
+
+  test("Should work with neq") {
+
+    when {
+      process {
+        """
+        input[0] = file("tests/fasta.1.fasta.gz")
+        """
+      }
+    }
+
+    then {
+      assert path(process.out.fasta.get(0)).fasta != path("tests/fasta.3.fasta").fasta
+    }
+
+  }
+  
+  test("Sample seq1 should be in fasta.1") {
+
+    when {
+      process {
+        """
+        input[0] = file("tests/fasta.1.fasta.gz")
+        """
+      }
+    }
+
+    then {
+      def sequences = path(process.out.fasta.get(0)).fasta
+      assert "seq1" in sequences
+      assert !("seq8" in sequences)
+      assert sequences.seq1 == "AGTACGTAGTAGCTGCTGCTACGTGCGCTAGCTAGTACGTCACGACGTAGATGCTAGCTGACTCGATGC"
+    }
+
+  }   
+   
+
+}
