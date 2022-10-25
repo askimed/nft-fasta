@@ -1,4 +1,4 @@
-moduleName=nf-test-genomics
+moduleName=nft-genomics
 moduleVersion=1.0.0
 moduleAuthors=Lukas Forer
 extensionClasses=com.askimed.nf.test.genomics.PathExtension

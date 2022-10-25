@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.askimed</groupId>
-	<artifactId>nf-test-genomics</artifactId>
+	<artifactId>nft-genomics</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>nf-test-bio</name>
+	<name>nf-test-genomics</name>
 	<description>nf-test plugin to support bioinformatics file formats</description>
-	<url>https://github.com/askimed/nf-test-genomics</url>
+	<url>https://github.com/askimed/nft-genomics</url>
 
 	<licenses>
 		<license>
@@ -20,9 +20,9 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/askimed/nf-test-genomics/tree/master</url>
-		<connection>scm:git:https://github.com/askimed/nf-test-genomics</connection>
-		<developerConnection>scm:git:ssh://github.com:askimed/nf-test-genomics.git</developerConnection>
+		<url>https://github.com/askimed/nft-genomics/tree/master</url>
+		<connection>scm:git:https://github.com/askimed/nft-genomics</connection>
+		<developerConnection>scm:git:ssh://github.com:askimed/nft-genomics.git</developerConnection>
 	</scm>
 
 	<properties>
