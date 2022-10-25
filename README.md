@@ -1,4 +1,4 @@
-# nf-test-genomics
+# nft-genomics
 
 nf-test plugin to provide support for bioinformatics file formats.
 
