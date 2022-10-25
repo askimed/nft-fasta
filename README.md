@@ -20,7 +20,7 @@ config {
 
 ## Usage
 
-nf-test extends `path` by a `fasta` property that can be used to read FASTA files into maps. nf-test supports also gzipped FASTA files.
+nft-fasta extends `path` by a `fasta` property that can be used to read FASTA files into maps. nft-fasta supports also gzipped FASTA files.
 
 
 ### Comparing files
