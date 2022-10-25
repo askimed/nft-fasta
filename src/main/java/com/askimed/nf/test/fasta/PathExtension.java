@@ -1,4 +1,4 @@
-package com.askimed.nf.test.genomics;
+package com.askimed.nf.test.fasta;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

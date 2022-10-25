@@ -1,6 +1,6 @@
-# nft-genomics
+# nft-fasta
 
-nf-test plugin to provide support for bioinformatics file formats.
+nf-test plugin to provide support for FASTA files.
 
 ## Requirements
 
@@ -8,17 +8,17 @@ nf-test plugin to provide support for bioinformatics file formats.
 
 ## Setup
 
-To use this plugin you need to activate the `nft-genomics` plugin in your `nf-test.config` file:
+To use this plugin you need to activate the `nft-fasta` plugin in your `nf-test.config` file:
 
 ```
 config {
   plugins {
-    load "nft-genomics@1.0.0"
+    load "nft-fasta@1.0.0"
   }
 }
 ```
 
-## FASTA Files
+## Usage
 
 nf-test extends `path` by a `fasta` property that can be used to read FASTA files into maps. nf-test supports also gzipped FASTA files.
 

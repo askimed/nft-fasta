@@ -1,5 +1,5 @@
-moduleName=nft-genomics
+moduleName=nft-fasta
 moduleVersion=1.0.0
 moduleAuthors=Lukas Forer
-extensionClasses=com.askimed.nf.test.genomics.PathExtension
-extensionMethods=com.askimed.nf.test.genomics.Methods
+extensionClasses=com.askimed.nf.test.fasta.PathExtension
+extensionMethods=com.askimed.nf.test.fasta.Methods
